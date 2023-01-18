@@ -111,6 +111,11 @@ public class Pengirim extends javax.swing.JFrame {
         });
 
         tambahButton.setText("Tambah Barang");
+        tambahButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tambahButtonActionPerformed(evt);
+            }
+        });
 
         simpanButton.setText("Simpan");
         simpanButton.addActionListener(new java.awt.event.ActionListener() {
@@ -221,6 +226,12 @@ public class Pengirim extends javax.swing.JFrame {
         }
     
     }//GEN-LAST:event_resiButtonActionPerformed
+
+    private void tambahButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambahButtonActionPerformed
+        Barang bar = new Barang();
+        bar.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_tambahButtonActionPerformed
 
     /**
      * @param args the command line arguments

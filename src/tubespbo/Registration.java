@@ -157,14 +157,17 @@ public class Registration extends javax.swing.JFrame {
         String noTelp = Fnotel.getText();
         String tipe = Ctipe.getSelectedItem().toString();
         try {
-            String sql = "INSERT INTO user VALUES ('"+id+"','"+username+"','"+pass+"','"+tipe+"','"+email+"','"+noTelp+"')";
+            String sql = "INSERT INTO user VALUES ('"+id+"', '"+username+"','"+pass+"','"+tipe+"','"+email+"','"+noTelp+"')";
             Connection conn= koneksi.getConnection();
             PreparedStatement pst = conn.prepareStatement(sql);
             pst.execute();
+            Exception e;
             JOptionPane.showMessageDialog(null, "Data berhasil ditambahkan");
         }catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
+        
+        
         
         Loginable Login = new Loginable();
         Login.setVisible(true);
